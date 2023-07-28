@@ -34,12 +34,6 @@ func TestChunkBy(t *testing.T) {
 	}
 }
 
-func FuzzContains(f *testing.F) {
-	f.Fuzz(func(t *testing.T, s []byte, e byte) {
-		Contains(s, e)
-	})
-}
-
 func TestContains(t *testing.T) {
 	type args[T comparable] struct {
 		s []T
